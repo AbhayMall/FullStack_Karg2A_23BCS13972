@@ -4,24 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhay Mall</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section>
-      <header>
-        <h1>Abhay Mall</h1>
-        <p>Hello, I'm CSE Student at Chandigarh University</p>
-        <img
-          src="zjN7W3mhXjZNtCFZb4Y1PAfOK_adVx5lXhKNC7vLYcg=.png"
-          width="300px"
-          height="300px"
-        />
+      <header
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background-color: #825bd7ee;
+        "
+      >
+        <div style="flex: 1">
+          <h1 style="text-align: left; color: #151516">Abhay Mall</h1>
+          <p style="text-align: left">
+            Hello, I'm a CSE Student at Chandigarh University
+          </p>
+
+          <div style="margin-top: 10px">
+            <p style="max-width: 300px">
+              Passionate about full-stack development and problem-solving. I
+              love building useful applications and constantly learning new
+              technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="img1">
+          
+        </div>
       </header>
+
       <hr />
       <nav>
         <a href="#">Leetcode</a>
-        <br />
+       
         <a href="#">Github</a>
-        <br />
+  
         <a href="#">LinkedIn</a>
       </nav>
     </section>
@@ -82,20 +103,32 @@
         </tr>
       </table>
     </section>
-    <hr /> 
+    <hr />
     <section>
       <h2>Contact Me</h2>
       <form action="script.js" method="post">
-        <input type="text"  id="name" placeholder="Enter the Name" style="margin: 5px;">
-        <br>
-        <input type="text"  id="Email" placeholder="Enter the Email" style="margin: 5px;">
-        <br>
-        <textarea id="area" rows="10" cols="30" style="margin: 5px;">Please give the Feedback</textarea>
-        <br>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter the Name"
+          style="margin: 5px"
+        />
+        <br />
+        <input
+          type="text"
+          id="Email"
+          placeholder="Enter the Email"
+          style="margin: 5px"
+        />
+        <br />
+        <textarea id="area" rows="10" cols="30" style="margin: 5px">
+Please give the Feedback</textarea
+        >
+        <br />
         <button type="submit">Submit</button>
       </form>
     </section>
-    <hr>
+    <hr />
     <footer>
       <p>&copy;All rights are reserved 2019</p>
     </footer>
