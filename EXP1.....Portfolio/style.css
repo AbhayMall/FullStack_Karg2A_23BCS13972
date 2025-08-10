@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #f4f6fa;
+}
+
+.about-img {
+  background-image: url("WhatsApp\ Image\ 2025-08-05\ at\ 11.07.18_2a0ffc04.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #004080;
+  margin-right: 30px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #004080;
+  font-weight: bold;
+}
+
+
+#projects {
+  padding: 30px;
+  background: white;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #e6f0ff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1 1 30%;
+}
+
+#qualification {
+  padding: 30px;
+  background: #f4f6fa;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #004080;
+  color: white;
+}
+
+/* Contact */
+#contact {
+  padding: 30px;
+}
+
+form input, form textarea {
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
