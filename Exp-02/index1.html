@@ -1,0 +1,60 @@
+<!-- Aim
+To implement a dynamic product filtering system that updates displayed items based on user dropdown selection using JavaScript and DOM manipulation.
+
+Objectives
+Create a product dataset
+
+Build filter dropdown UI
+
+Implement filter logic using Array.prototype.filter()
+
+Dynamically update the DOM
+
+Add visual feedback (e.g., filtered results)
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Filter</title>
+  </head>
+  <body>
+    <h2>Product Filter</h2>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+    </select>
+
+    <div id="products"></div>
+
+
+    <!-- this is the javascript code for this experiment. -->
+     
+    <script>
+      const products = [
+        { name: "Laptop", category: "electronics", price: 999 },
+        { name: "Shirt", category: "clothing", price: 25 },
+        { name: "Headphones", category: "electronics", price: 199 },
+      ];
+
+      function showProducts(items) {
+        let html = "";
+        for (let p of items) {
+          html += p.name + " - $" + p.price + "<br>";
+        }
+        document.getElementById("products").innerHTML = html;
+      }
+
+
+      showProducts(products);
+
+      document.getElementById("filter").onchange = function () {
+        let val = this.value;
+        showProducts(
+          val == "all" ? products : products.filter((p) => p.category == val)
+        );
+      };
+    </script>
+  </body>
+</html>

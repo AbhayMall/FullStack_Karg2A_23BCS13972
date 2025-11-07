@@ -1,0 +1,46 @@
+<!-- Aim:
+To build an interactive library management interface using React components with full CRUD (Create, Read, Update, Delete) functionality.
+
+Objectives:
+
+Design a book listing component.
+
+Implement search functionality.
+
+Add a form for new book entries.
+
+Enable update and delete capabilities for each book.
+
+Manage state using React hooks.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { margin: 5px; }
+    button { margin-left: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Library Management</h2>
+
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Title" required>
+    <input type="text" id="author" placeholder="Author" required>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <input type="text" id="search" placeholder="Search by title...">
+
+  <ul id="bookList"></ul>
+
+  <script src="script1.js"></script>
+
+</body>
+</html>

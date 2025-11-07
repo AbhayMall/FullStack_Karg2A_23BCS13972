@@ -1,0 +1,57 @@
+<!-- Aim
+To create an interactive SVG-based drawing tool using DOM and mouse event handling in JavaScript.
+
+Objectives
+Create an SVG drawing area in HTML
+
+Handle mouse events to draw shapes (e.g., circles)
+
+Allow dynamic drawing using createElementNS()
+
+Implement optional color selection and undo functionality
+
+ -->
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Drawing Tool</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #canvas { border:1px solid black; cursor: crosshair; }
+    button { margin-top: 10px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+<h2>SVG Drawing Tool</h2>
+<svg id="canvas" width="500" height="400"></svg>
+<br>
+<button onclick="undo()">Undo</button>
+
+
+<!-- this is the javascript code for this experiment. -->
+<script>
+const svg = document.getElementById('canvas');
+let drawings = [];
+
+
+svg.addEventListener('mousedown', (e) => {
+  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  circle.setAttribute('cx', e.offsetX);
+  circle.setAttribute('cy', e.offsetY);
+  circle.setAttribute('r', 8);
+  circle.setAttribute('fill', 'blue');
+  svg.appendChild(circle);
+  drawings.push(circle);
+});
+
+function undo() {
+  const last = drawings.pop();
+  if(last) svg.removeChild(last);
+}
+</script>
+
+</body>
+</html>

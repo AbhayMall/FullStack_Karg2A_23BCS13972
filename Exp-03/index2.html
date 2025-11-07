@@ -1,0 +1,91 @@
+<!-- Experiment 6: Person Hierarchy with Inheritance
+Aim:
+To implement object-oriented inheritance in JavaScript by creating a hierarchy of Person, Student, and Teacher classes.
+
+Objectives:
+
+Define a base Person class with common properties.
+
+Create Student and Teacher subclasses extending Person.
+
+Implement method overriding in subclasses.
+
+Demonstrate polymorphism through shared methods.
+
+Utilize instanceof to verify object types.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Hierarchy</title>
+</head>
+<body>
+
+  <h2>Person Hierarchy Output</h2>
+  <div id="output"></div>
+
+  <script>
+    
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return `Hi, I'm ${this.name} and I'm ${this.age} years old.`;
+  }
+}
+
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age);        
+    this.grade = grade;
+  }
+
+  greet() {
+    return `${super.greet()} I'm a student in grade ${this.grade}.`;
+  }
+
+  study() {
+    return `${this.name} is studying.`;
+  }
+}
+
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+
+  greet() {
+    return `${super.greet()} I teach ${this.subject}.`;
+  }
+
+  teach() {
+    return `${this.name} is teaching ${this.subject}.`;
+  }
+}
+
+const person = new Person('Alex', 30);
+const student = new Student('Emily', 20, '12th');
+const teacher = new Teacher('Mr. Smith', 45, 'Mathematics');
+
+console.log(person.greet());        
+console.log(student.greet());       
+console.log(student.study());       
+console.log(teacher.greet());        
+console.log(teacher.teach());        
+
+console.log(student instanceof Person);  
+console.log(teacher instanceof Student);
+
+
+  </script>
+</body>
+</html>
+
+
