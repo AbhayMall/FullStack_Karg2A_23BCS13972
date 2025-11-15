@@ -1,0 +1,4 @@
+/* src/styles/index.css - Minimal working version */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

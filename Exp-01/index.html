@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Bank Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bank-interface">
+    <h2>Account Balance: <span id="balance">$1000</span></h2>
+    <input type="number" id="amount" placeholder="Enter amount" min="0">
+    <div class="btn-group">
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
